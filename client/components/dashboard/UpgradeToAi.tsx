@@ -5,24 +5,38 @@ export default function UpgradeToAi() {
   return (
     <div className="flex justify-center">
       <div
-        className="w-full max-w-md p-8 rounded-2xl border border-[#DDD9D0] shadow-md flex flex-col items-center text-center gap-4 transition-all duration-300 hover:shadow-lg "
-        style={{
-          background: "linear-gradient(135deg, #AFC4D1, #6C8FA3)",
-          borderRadius: "12px",
-        }}
+        className="relative w-full max-w-xs p-5 rounded-[10px] border border-white/20 
+        bg-linear-to-br from-[#5f726e] to-[#a3c2bd]
+        text-white shadow-md hover:shadow-lg transition-all duration-300
+        overflow-hidden"
       >
+        {/* subtle glow */}
+        <div className="absolute inset-0 bg-white/5 blur-2xl" />
+
+        {/* icon */}
+        <div className="relative flex justify-center mb-3">
+          <div className="p-2 rounded-full bg-white/10">
+            <Sparkles className="text-[#F8F7F4]" size={18} />
+          </div>
+        </div>
+
         {/* Text */}
-        <div>
-          <h3 className="text-lg font-semibold text-[#2F3A40]">
+        <div className="relative text-center">
+          <h3 className="text-base font-semibold text-[#F8F7F4]/90">
             Upgrade to AI Planner
           </h3>
-          <p className="text-sm text-[#5F6B73] mt-1">
-            Get smart study plans, insights, and automation
+
+          <p className="text-xs text-[#F8F7F4]/70 mt-1.5 leading-snug">
+            Smart study plans and personalized insights for your learning flow.
           </p>
         </div>
 
         {/* CTA Button */}
-        <button className="mt-2 w-full px-5 py-2 rounded-lg  text-white text-sm font-medium bg-[#5A7C90] cursor-pointer shadow-md hover:bg-[#618092] transition">
+        <button
+          className="relative mt-4 w-full px-4 py-2 rounded-[10px]
+          bg-[#F8F7F4] text-[#2F3A40] font-semibold text-xs
+          hover:scale-[1.02] hover:shadow-md transition"
+        >
           Upgrade Now
         </button>
       </div>

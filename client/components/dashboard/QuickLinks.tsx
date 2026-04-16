@@ -28,14 +28,14 @@ export default function QuickLinks() {
 
   return (
     <div
-      className="bg-[#ebe9e5] border border-[#DDD9D0] p-5 "
+      className="bg-[#F5F3EE]  p-5 shadow-sm hover:shadow-md transition"
       style={{
         boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
-        borderRadius: "12px",
+        borderRadius: "10px",
       }}
     >
       {/* Header */}
-      <h2 className="text-lg font-semibold text-[#2F3A40] mb-4">Quick Links</h2>
+      <h2 className="text-lg font-semibold text-[#344945] mb-4">Quick Links</h2>
 
       {/* Grid - 2 per row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -46,10 +46,14 @@ export default function QuickLinks() {
             <Link
               key={index}
               href={link.href}
-              className="flex items-center gap-2 p-3 rounded-lg border border-[#DDD9D0]   bg-[#F5F3EE] hover:bg-[#E3DFD6] hover:shadow-sm transition"
+              className="flex items-center gap-2 p-3 rounded-[10px]   hover:bg-[#f0eeeb] cursor-pointer  bg-white border border-[#E5E2DA] 
+hover:border-[#344945]/30 hover:shadow-sm
+hover:-translate-y-0.5 transition"
             >
-              <Icon size={18} className="text-[#537483]" />
-              <span className="text-[#2F3A40] font-medium">{link.name}</span>
+              <Icon size={18} className="text-[#344945]" />
+              <span className="text-[#1F2933] text-sm font-medium">
+                {link.name}
+              </span>
             </Link>
           );
         })}
