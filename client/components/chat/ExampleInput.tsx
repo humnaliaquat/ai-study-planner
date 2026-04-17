@@ -16,7 +16,7 @@ export default function ExampleInput({ setInput }: Props) {
   ];
   return (
     <div className="w-full  mt-6">
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-3">
         {examples.map((text, index) => (
           <button
             key={index}
@@ -24,7 +24,7 @@ export default function ExampleInput({ setInput }: Props) {
             className="group flex items-center justify-between 
             bg-[#F5F3EE] border border-[#D1CCC0] 
             hover:bg-[#E7E5DE] hover:border-[#B8B0A0]
-            rounded-xl px-4 py-2 text-sm text-[#1F2937]
+            rounded-xl px-6 py-2 text-sm text-[#1F2937]
             transition"
           >
             {text}

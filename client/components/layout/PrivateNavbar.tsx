@@ -14,14 +14,18 @@ export default function PrivateNavbar() {
         {/* Upgrade Button */}
         <button
           className="flex items-center gap-2 
-          bg-[#E4E3BC] text-[#2F3A40] 
-          px-4 py-1.5 rounded-lg text-sm font-medium 
-          hover:bg-[#d6d4a8] hover:text-[#344945] 
+          bg-[#e0dfad] text-[#2F3A40] 
+          px-4 py-2 rounded-lg text-xs font-medium 
+          hover:bg-[#d6d4a8] hover:text-[#1F2933] 
           transition shadow-sm hover:shadow-md cursor-pointer"
         >
           <ArrowUpFromLine className="w-4 h-4" />
           Upgrade
         </button>
+        {/* User Avatar */}
+        <div className="ml-4 w-8 h-8 rounded-full bg-[#683618] flex items-center justify-center">
+          <span className="text-white text-sm font-medium">JD</span>
+        </div>
       </div>
     </div>
   );

@@ -2,6 +2,10 @@ import PrivateNavbar from "@/components/layout/PrivateNavbar";
 import Sidebar from "@/components/layout/Sidebar";
 import React from "react";
 import { Inter } from "next/font/google";
+import "primereact/resources/themes/lara-light-indigo/theme.css"; // theme
+import "primereact/resources/primereact.min.css"; // core css
+import "primeicons/primeicons.css"; // icons
+import "quill/dist/quill.snow.css"; // editor style
 
 const inter = Inter({
   subsets: ["latin"],
@@ -23,7 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </div>
 
       {/* Main area */}
-      <div className="flex-1 ml-64 relative min-h-screen">
+      <div className="flex-1 ml-64 relative ">
         <PrivateNavbar />
 
         <main className="pt-16 pb-24">{children}</main>
