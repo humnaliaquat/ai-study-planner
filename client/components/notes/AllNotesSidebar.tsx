@@ -3,9 +3,9 @@ import { Plus } from "lucide-react";
 
 export default function AllNotesSidebar() {
   return (
-    <div className="w-72 h-full  border-r border-[#E5E2DA] bg-[#FAF9F6] flex flex-col">
+    <div className="w-72 h-full border-r  border-[#E5E2DA] bg-[#FAF9F6] flex flex-col overflow-hidden">
       {/* Header */}
-      <div className="p-5 border-b border-[#E5E2DA]">
+      <div className="p-5 pt-2 pb-1.5 border-b border-[#E5E2DA]">
         <h2 className="text-lg font-semibold text-[#1F2933]">All Notes</h2>
       </div>
 

@@ -7,17 +7,12 @@ export default function MyEditor() {
   const [text, setText] = useState<string>("");
 
   return (
-    <div className=" p-4">
+    <div className="custom-editor h-full flex flex-col">
       <Editor
         value={text}
         onTextChange={(e) => setText(e.htmlValue || "")}
-        style={{ height: "300px" }}
+        style={{ height: "452px", border: "none" }}
       />
-
-      <div className="mt-4">
-        <h3>Preview:</h3>
-        <div dangerouslySetInnerHTML={{ __html: text }} />
-      </div>
     </div>
   );
 }

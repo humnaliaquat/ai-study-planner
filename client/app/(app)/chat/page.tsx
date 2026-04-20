@@ -6,7 +6,7 @@ import React, { useState } from "react";
 export default function Page() {
   const [input, setInput] = useState<string>("");
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center pt-16 px-6 ">
       <div className="flex flex-col items-center justify-center min-h-[70vh] px-4 text-center">
         <h1 className="text-3xl font-semibold mb-2 text-[#1F2937]">
           Learn Smarter with AI

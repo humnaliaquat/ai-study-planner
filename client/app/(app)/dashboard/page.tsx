@@ -16,7 +16,7 @@ import ContinueLearning from "@/components/dashboard/ContinueLearning";
 
 export default function Dashboard() {
   return (
-    <div className="p-6 px-15 mt-15  min-h-screen">
+    <div className="p-6 px-15 mt-15 pt-20 min-h-screen">
       {/* Greeting */}
       <h1 className=" mb-2 text-4xl font-semibold tracking-tight  text-[#1F2933]">
         Evening Hani!
