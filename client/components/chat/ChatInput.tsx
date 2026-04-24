@@ -1,10 +1,20 @@
 "use client";
-
+import axios from "axios";
 import { ArrowUp, AudioLines, Paperclip } from "lucide-react";
 import React, { useState } from "react";
 
-export default function ChatInput() {
+export default function ChatInput({
+  onSend,
+}: {
+  onSend: (msg: string) => void;
+}) {
   const [input, setInput] = useState<string>("");
+  const handleSend = async () => {
+    if (!input.trim()) return;
+    setInput("");
+    onSend(input.trim());
+    setInput("");
+  };
 
   return (
     <div className="w-full px-6 mt-6">
@@ -34,6 +44,7 @@ export default function ChatInput() {
 
         {/* Send */}
         <button
+          onClick={handleSend}
           disabled={!input.trim()}
           className="bg-[#344945] text-[#F8F7F4] px-2 py-2 rounded-full text-sm 
           hover:bg-[#2F3A40] transition disabled:opacity-50 disabled:cursor-not-allowed "
