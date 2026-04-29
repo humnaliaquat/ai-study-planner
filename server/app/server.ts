@@ -3,8 +3,9 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db";
 import chatRoute from "./routes/chatRoute";
-connectDB();
 dotenv.config();
+connectDB();
+
 
 const app = express();
 

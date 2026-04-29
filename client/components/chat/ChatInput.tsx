@@ -33,6 +33,12 @@ export default function ChatInput({
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+              e.preventDefault();
+              handleSend();
+            }
+          }}
           placeholder="Ask anything to study..."
           className="flex-1 bg-transparent outline-none text-sm text-gray-700 placeholder:text-gray-400"
         />
@@ -47,7 +53,7 @@ export default function ChatInput({
           onClick={handleSend}
           disabled={!input.trim()}
           className="bg-[#344945] text-[#F8F7F4] px-2 py-2 rounded-full text-sm 
-          hover:bg-[#2F3A40] transition disabled:opacity-50 disabled:cursor-not-allowed "
+          hover:bg-[#2F3A40] transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed "
         >
           <ArrowUp className="w-4 h-4" />
         </button>

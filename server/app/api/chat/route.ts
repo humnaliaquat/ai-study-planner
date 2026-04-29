@@ -1,7 +1,7 @@
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey: process.env.GROQ_API_KEY,
+  apiKey: process.env.API_KEY,
   baseURL: "https://api.groq.com/openai/v1",
 });
 
@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
   try {
     const response = await openai.chat.completions.create({
-      model: "llama3-70b-8192",
+      model: "llama3-8b-8192",
       messages: [
         {
           role: "system",

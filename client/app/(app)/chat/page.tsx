@@ -14,7 +14,7 @@ export default function Page() {
   const handleSend = async (userMessage: string) => {
     setMessages((prev) => [...prev, { role: "user", content: userMessage }]);
     try {
-      const res = await axios.post("api/chat", {
+      const res = await axios.post("http://localhost:5000/api/chat", {
         message: userMessage,
       });
 

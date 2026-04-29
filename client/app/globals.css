@@ -19,6 +19,13 @@
 *::-webkit-scrollbar-thumb:hover {
   background-color: #A8A39A;
 }
+.no-scrollbar::-webkit_scrollbar{
+  display: none;
+}
+.no-scrollbar{
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
 
 /* primary: #344945
 secondary: #E4E3BC
