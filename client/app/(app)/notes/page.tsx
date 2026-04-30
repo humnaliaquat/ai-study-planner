@@ -9,7 +9,7 @@ export default function Page() {
     <div className="h-screen flex flex-col overflow-hidden pt-16 px-6">
       {/* Header */}
       <div className="flex items-center justify-between px-2 pt-6 pb-4 border-b border-[#E5E2DA]">
-        <h1 className="text-3xl font-medium tracking-tight text-[#1F2933]">
+        <h1 className="text-2xl font-medium tracking-tight text-[#1F2933]">
           Notes
         </h1>
 
